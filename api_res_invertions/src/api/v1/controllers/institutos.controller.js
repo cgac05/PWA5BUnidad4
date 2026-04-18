@@ -2,9 +2,9 @@ import * as InstitutosServices from '../services/institutos.service';
 import boom from '@hapi/boom';
 import { OK, FAIL } from '../../../middlewares/resp.handler';
 
-//FIC: API GET 
+//CGAC: API GET 
 //---------------------------------------- 
-//FIC: Todos los Institutos.
+//AGU: Todos los Institutos.
 export const getInstitutosList = async (req, res, next) => {
   try {
     const institutosList = await InstitutosServices.getInstitutosList();
@@ -19,7 +19,7 @@ export const getInstitutosList = async (req, res, next) => {
   }
 };
 
-//FIC: Solo un Instituto.
+//JAPV: Solo un Instituto.
 export const getInstitutoItem = async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -36,7 +36,7 @@ export const getInstitutoItem = async (req, res, next) => {
   }
 };
 
-//FIC: API POST
+//CDCH: API POST
 //----------------------------------------
 //NOTA 7.2 Y 7.2.1: Agregar nuevo Instituto con manejo de status 201/409
 export const postInstitutoItem = async (req, res, next) => {
@@ -90,15 +90,15 @@ export const pushElementToSubdocument = async (req, res, next) => {
   }
 };
 
-//FIC: API PUT
+//BAFS: API PUT
 //----------------------------------------
 //NOTA 8.2: Actualizar Instituto existente
 export const putInstitutoItem = async (req, res, next) => {
   try {
     const { id } = req.params;
-    console.log('FIC: controller id --> ', id);
+    console.log('JAPV: controller id --> ', id);
     const paInstitutoItem = req.body;
-    console.log('FIC: controller body --> ', paInstitutoItem);
+    console.log('CGAC: controller body --> ', paInstitutoItem);
     const updatedInstitutoItem = await InstitutosServices.putInstitutoItem(id, paInstitutoItem);
     if (!updatedInstitutoItem) {
       throw boom.badRequest('No se pudo actualizar el Instituto.');
@@ -134,13 +134,13 @@ export const updateElementInSubdocument = async (req, res, next) => {
   }
 };
 
-//FIC: API DELETE
+//MASU: API DELETE
 //----------------------------------------
 //NOTA 9.2: Eliminar Instituto existente
 export const deleteInstitutoItem = async (req, res, next) => {
   try {
     const { id } = req.params;
-    console.log('FIC: controller DELETE id --> ', id);
+    console.log('BAFS: controller DELETE id --> ', id);
     const deletedInstitutoItem = await InstitutosServices.deleteInstitutoItem(id);
     if (!deletedInstitutoItem) {
       throw boom.notFound('No se encontró el Instituto a eliminar.');

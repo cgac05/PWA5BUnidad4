@@ -6,7 +6,7 @@ const institutosSchema  = new mongoose.Schema({
     IdInstitutoBK : { type : String, required : true },
     DesInstituto  : { type : String, required : true },
     Alias         : { type : String, required : false },
-    Matriz        : { type : String, required : false },
+    Matriz        : { type : String, required : false }, 
     Giro          : { type : String, required : false },
     IdInstitutoSupOK  : { type : String, required : false }
 });

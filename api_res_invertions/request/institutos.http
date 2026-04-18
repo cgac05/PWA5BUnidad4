@@ -1,7 +1,7 @@
 @api = http://localhost:3020/api/v1/institutos
 #@api = http://187.229.22.99:8010/api/v1/institutos
 
-### GET - List All Institutos
+### GET - List All Institutos 
 GET {{api}}
 
 ### GET - Get Instituto by OK Key

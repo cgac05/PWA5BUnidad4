@@ -1,20 +1,20 @@
 import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
-//FIC: imports Routes
+//CGAC: imports Routes
 import routeAPI from "./api/v1/routes/index.js";
 
-//FIC: imports Swagger
-//FIC: imports Routes
-//FIC: imports Middlewares
-//FIC: Config para variables de entorno
+//AGU: imports Swagger
+//JAPV: imports Routes
+//CDCH: imports Middlewares
+//BAFS: Config para variables de entorno
 import config from './config/config';
-//FIC: Declaramos la constante app igualandola a express
+//MASU: Declaramos la constante app igualandola a express
 const app = express();
 
-//FIC: Establece la conexion a la BD 
+//CGAC: Establece la conexion a la BD 
 import { mongoose } from './config/database.config';
-//FIC: Settings
+//JAPV: Settings
 app.set('port', config.PORT);
 mongoose.connection.on('error', (error) => {
     console.error('Mongo connection error:', error);
@@ -22,12 +22,12 @@ mongoose.connection.on('error', (error) => {
 mongoose.connection.on('connected', () => {
     console.log('Mongo connection ready');
 });
-//FIC: Middlewares generales
+//AGU: Middlewares generales
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-//FIC: Routes
+//BAFS: Routes
 const api = config.API_URL;
 app.get(`${api}`, (req,res)=>{
     res.send(

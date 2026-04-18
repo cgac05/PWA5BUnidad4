@@ -2,7 +2,7 @@
 import Institutos from "../models/Institutos";
 import boom from '@hapi/boom';
 
-//FIC: GET INSTITUTOS LIST
+//MASU: GET INSTITUTOS LIST
 export const getInstitutosList = async () => {
   let institutosList;
   try {
@@ -13,7 +13,7 @@ export const getInstitutosList = async () => {
   }
 };
 
-//FIC: GET INSTITUTO BY ID
+//CDCH: GET INSTITUTO BY ID
 export const getInstitutoItem = async (id, keyType) => {
   let institutoItem;
 
@@ -33,7 +33,7 @@ export const getInstitutoItem = async (id, keyType) => {
   }
 };
 
-//FIC: POST (ADD) INSTITUTO
+//CGAC: POST (ADD) INSTITUTO
 export const postInstitutos = async (paInstitutoItem) => {
   try {
     const newInstitutoItem = new Institutos(paInstitutoItem);
@@ -44,7 +44,7 @@ export const postInstitutos = async (paInstitutoItem) => {
 };
 
 //NOTA 7.1.2: PUSH A SUBDOCUMENTO - ARREGLO DE OBJETOS
-//FIC: ADD ELEMENT TO SUBDOCUMENT ARRAY
+//JAPV: ADD ELEMENT TO SUBDOCUMENT ARRAY
 //Ejemplo: Agregar información adicional a institutos (si tuviera subdocumentos)
 export const pushObjToSubdocument = async (id, objToAdd, fieldName) => {
   try {
@@ -61,7 +61,7 @@ export const pushObjToSubdocument = async (id, objToAdd, fieldName) => {
 };
 
 //NOTA 8.1: PUT (MODIFY) INSTITUTOS
-//FIC: PUT API
+//BAFS: PUT API
 //Método para actualizar un Instituto existente
 export const putInstitutoItem = async (id, paInstitutoItem) => {
   try {
@@ -76,7 +76,7 @@ export const putInstitutoItem = async (id, paInstitutoItem) => {
 };
 
 //NOTA 8.1.1: PUT SUBDOCUMENTO - ARREGLO DE OBJETOS
-//FIC: UPDATE ELEMENT IN SUBDOCUMENT ARRAY
+//CDCH: UPDATE ELEMENT IN SUBDOCUMENT ARRAY
 //Método para actualizar elementos dentro de un arreglo de objetos en un subdocumento
 export const updateObjInSubdocument = async (id, objToUpdate, fieldName) => {
   try {
@@ -93,7 +93,7 @@ export const updateObjInSubdocument = async (id, objToUpdate, fieldName) => {
 };
 
 //NOTA 9.1: DELETE (REMOVE) INSTITUTOS
-//FIC: DELETE API
+//AGU: DELETE API
 //Método para eliminar un Instituto existente
 export const deleteInstitutoItem = async (id) => {
   try {

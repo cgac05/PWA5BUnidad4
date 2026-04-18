@@ -18,4 +18,4 @@ router.put('/:id', InstitutosController.putInstitutoItem);
 //NOTA 9.3: Ruta DELETE para eliminar Instituto
 router.delete('/:id', InstitutosController.deleteInstitutoItem);
 
-export default router;
+export default router;  
