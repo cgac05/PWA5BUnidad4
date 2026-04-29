@@ -41,10 +41,10 @@ temp/
 Thumbs.db
 desktop.ini
 
-*.js
+dist/**/*.js
+build/**/*.js
 *.js.map
 *.d.ts
-!src/
 
 .editorconfig
 .eslintcache
