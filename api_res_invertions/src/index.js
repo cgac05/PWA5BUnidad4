@@ -1,8 +1,0 @@
-import app from './app.js';
-
-const port = app.get('port') || process.env.PORT || 3000;
-
-app.listen(port, () => {
-  // eslint-disable-next-line no-console
-  console.log(`API listening on port ${port}`);
-});
