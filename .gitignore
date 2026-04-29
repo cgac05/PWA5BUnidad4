@@ -15,6 +15,7 @@ yarn.lock
 .env.production.local
 
 dist/
+api_res_invertions/
 build/
 *.tsbuildinfo
 
